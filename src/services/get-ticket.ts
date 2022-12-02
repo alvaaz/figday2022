@@ -19,7 +19,7 @@ export const getAttendeeByEmail = async (email: string | number) => {
 export const leaveSlot = async (email: string | number) => {
 	const { error } = await supabase
 		.from('users')
-    .update({ confirmation: true })
+    .update({ confirmation: false })
 		.eq('email', email)
 
 	if (error) {
