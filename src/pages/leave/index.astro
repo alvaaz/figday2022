@@ -1,0 +1,4 @@
+---
+const email = Astro.url.searchParams.get('email')
+return Astro.redirect(email ? `/ticket/${email}` : '/')
+---
