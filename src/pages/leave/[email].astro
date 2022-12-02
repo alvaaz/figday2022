@@ -5,6 +5,8 @@ const { email } = Astro.params;
 const { data, error: getAttendeeByEmailError } = await getAttendeeByEmail(
   email
 );
+
+console.log(Astro.params);
 const { error } = await leaveSlot(email);
 ---
 
