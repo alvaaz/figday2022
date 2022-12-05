@@ -2,7 +2,7 @@ import { supabase } from '../lib/supabase'
 
 export const getAttendeeByEmail = async (email: string | number) => {
 	const { data, error } = await supabase
-		.from('users')
+		.from('attendees')
     .select('*')
 		.eq('email', email)
 
@@ -18,7 +18,7 @@ export const getAttendeeByEmail = async (email: string | number) => {
 
 export const leaveSlot = async (email: string | number) => {
 	const { error } = await supabase
-		.from('users')
+		.from('attendees')
     .update({ confirmation: false })
 		.eq('email', email)
 
