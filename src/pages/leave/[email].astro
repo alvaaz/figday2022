@@ -6,7 +6,6 @@ const { data, error: getAttendeeByEmailError } = await getAttendeeByEmail(
   email
 );
 
-console.log(Astro.params);
 const { error } = await leaveSlot(email);
 ---
 
@@ -166,7 +165,7 @@ const { error } = await leaveSlot(email);
           <>
             <h1>¡Ups!</h1>
             <p>
-              Parece que aún no estás inscrito en el evento. Inscribete{" "}
+              Parece que aún no estás inscrito en el evento. Inscribete
               <a href="https://friends.figma.com/events/details/figma-chile-presents-figday-2022-aniversario-de-la-comunidad-wework-presencial/">
                 acá
               </a>
